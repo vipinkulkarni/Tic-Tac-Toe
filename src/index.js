@@ -101,8 +101,8 @@ import './index.css';
           'Go to move #'+ move + " - " + action :
           'Go to game start';
         return (
-          <li key={move}>
-            <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <li key={move} className='move'>
+            <button  className='move' onClick={() => this.jumpTo(move)}>{desc}</button>
           </li>
         )
       })
