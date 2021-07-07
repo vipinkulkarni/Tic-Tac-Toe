@@ -96,8 +96,9 @@ import './index.css';
       const winner= calculateWinner(current.squares);
       
       const moves= history.map((step,move) => {
+        const action = current.squares[move-1] + ' In square' + '('+ (parseInt(move/3)+1) + ',' + move%3 + ')';
         const desc= move ?
-          'Go to move #'+ move:
+          'Go to move #'+ move + " - " + action :
           'Go to game start';
         return (
           <li key={move}>
